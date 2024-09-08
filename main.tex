@@ -1,0 +1,132 @@
+
+% Preamble
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+% Packages
+\usepackage{amsmath,amstext,amssymb,amsfonts,latexsym}
+\usepackage{graphicx}
+\usepackage{bm}
+\usepackage{amsthm}
+\usepackage[utf8]{inputenc}
+\usepackage[UKenglish]{babel}
+\usepackage{csquotes}% Recommended
+\usepackage{ccicons}
+\usepackage{animate}
+\usepackage{setspace}
+\usepackage{pdfpages}
+\usepackage[pdftex,bookmarks=true]{hyperref}
+\usepackage{tabularx}
+\usepackage{longtable}
+\definecolor{taublue}{RGB}{53,115,147}
+\hypersetup{
+    pdfauthor = {Name goes here},
+    pdftitle = {Title goes here},
+    colorlinks,
+    linkcolor={taublue},
+    citecolor={taublue},
+    urlcolor={taublue}
+}
+\usepackage[style=authoryear, backend=biber, uniquename=false, uniquelist=false, maxcitenames=2, hyperref=true]{biblatex}
+\addbibresource{references.bib}
+\usepackage{tocbibind}
+\usepackage{microtype}
+\usepackage{braket}
+\usepackage{geometry}
+
+\theoremstyle{definition}
+\newtheorem{question}{Question}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{assumption}{Assumption}[section]
+\newtheorem{condition}{Condition}[section]
+
+\long\def\@makecaption#1#2{%
+  \setbox\@tempboxa\vbox{\color@setgroup
+    \advance\hsize-2\captionindent\noindent
+    \@captionfont\@captionheadfont#1\@xp\@ifnotempty\@xp
+        {\@cdr#2\@nil}{:\@captionfont\upshape\enspace#2}%
+    \unskip\kern-2\captionindent\par
+    \global\setbox\@ne\lastbox\color@endgroup}%
+  \ifhbox\@ne
+    \setbox\@ne\hbox{\unhbox\@ne\unskip\unskip\unpenalty\unkern}%
+  \fi
+  \ifdim\wd\@tempboxa=\z@
+    \setbox\@ne\hbox to\columnwidth{\hss\kern-2\captionindent\box\@ne\hss}%
+  \else
+    \setbox\@ne\vbox{\unvbox\@tempboxa\parskip\z@skip
+        \noindent\unhbox\@ne\advance\hsize-2\captionindent\par}%
+  \fi
+  \ifnum\@tempcnta<64
+    \addvspace\abovecaptionskip
+    \hbox to\hsize{\kern\captionindent\box\@ne\hss}%
+  \else
+    \hbox to\hsize{\kern\captionindent\box\@ne\hss}%
+    \nobreak
+    \vskip\belowcaptionskip
+  \fi
+\relax
+}
+
+
+\newcommand{\jy}[1]{\textcolor{red}{#1}}
+\newcommand{\hw}[1]{\textcolor{blue}{#1}}
+
+% Set line spacing
+
+
+% Document
+\begin{document}
+
+    % \input{cover_page}
+    % \clearpage
+    \begin{minipage}{\textwidth}
+
+        \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+        \center % Center everything on the page
+        %----------------------------------------------------------------------------------------
+        % TITLE SECTION
+        %----------------------------------------------------------------------------------------
+        \HRule \\[0.4cm]
+        { \Large \bfseries Knowledge Graph-Augmented LLM Adaptation For\\\vspace{0.2cm} Domain-Specific Question-Answering}\\[0.4cm] % Title of your document
+        \HRule \\[1.5cm]
+        %----------------------------------------------------------------------------------------
+        % AUTHOR SECTION
+        %----------------------------------------------------------------------------------------
+        \begin{minipage}{0.4\textwidth}
+        \begin{flushleft} \large
+        \emph{Author:}\\
+        Hao \textsc{Wu}\\
+         % Your name
+        \end{flushleft}
+        \end{minipage}
+        ~
+        \begin{minipage}{0.5\textwidth}
+        \begin{flushright} \large
+        \emph{Supervisor:} \\
+        A/Prof. Jie \textsc{Yin}
+        \end{flushright}
+        \end{minipage}\\[3cm]
+       
+    \end{minipage}
+
+    % \newgeometry{a4paper, left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm}
+
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{1em}
+    % \onehalfspacing
+    \input{contents/abstract}
+    \input{contents/introduction}
+    \input{contents/related_works}
+    \input{contents/objectives}
+    \input{contents/methodology}
+    \input{contents/future_plan}
+
+
+    \addcontentsline{toc}{section}{References}
+    \newpage
+    \printbibliography
+
+\end{document}

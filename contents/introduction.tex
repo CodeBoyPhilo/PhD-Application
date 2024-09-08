@@ -1,0 +1,42 @@
+\section*{Introduction}\label{sec:introduction}
+
+Large Language Models (LLMs) are a family of generative artificial intelligence (AI) systems designed to understand, generate, and interact with human language. They are trained using deep learning techniques on large-scale corpora from diverse text sources, including books, articles, and other available text data, to learn a wide range of language patterns and contexts. LLMs have been attracting an increasing amount of attention not only from field experts but also from
+the public, due to their advanced reasoning capabilities and exceptional performance across a variety of natural language processing (NLP)
+tasks, including but not limited to text and code generation, summarisation, sentiment analysis, and question answering~\parencite{brown2020language, zero-shot-reasoner, palm, won2024scaling}.
+Through the use of a text-based \emph{prompt}, where the users input their queries or instructions,
+the LLM encodes the prompt into numerical tokens and utilises its internal parameters
+to generate the responses.
+With their advanced reasoning ability and intuitive interaction scheme, an increasing number of companies are incorporating LLMs into their business models to create additional value for the customers. For instance, the fast food industry giant Domino's Pizza is leveraging LLM-based chatbots as part of their recommender system
+to assist customers in placing online orders~\parencite{dominos_ai}.
+
+Despite their strong capacities, the LLMs suffer from two sigificant weaknesses that impede its reliability and trustworthieness when answering domain-specific questions. 
+The first critical issue that recent studies have identified is the frequent occurence of \emph{hallucination} in LLM response generation
+~\parencite{kgr, kalm-prompting, huang2023survey, ji2023survey}. 
+Hallucinated responses often exhibit logical flaws and, more detrimentally, contain factually inaccurate information.
+This flaw significantly impairs the reasoning performance and can negatively impact the efficacy of LLMs on domain-specific question-answering (QA) tasks.
+For example, consider a scenario where a user seeks biomedical advice from an LLM, receiving a response contains fabricated misinformation could potentially lead to life-threatening consequences~\parencite{pmc-llama}.
+Another weakness of LLMs in domain-specific question-answering tasks is their \emph{lack of domain-specific specialised knowledge}.
+As LLMs are pre-trained on vast amounts of text corpora across diverse sources and fields, they do not necessarily acquire in-depth specialised domain knowledge. As such, general-purpose LLMs typically possess a broad scope of information across multiple fields but lack the specialised expertise crucial for domain-specific question-answering tasks.
+
+To combat the challenges of \textbf{hallucination} and \textbf{lack of specialised knowledge}, a series of methods have been recently proposed, which can be classified into domain-specific fine-tuning methods and external resources augmented methods.
+
+Domain-specific fine-tuning methods, as the name suggests, aim to \emph{edit} the internal knowledge of the LLM by updating the model parameter through a full-scale fine-tuning or parameter-efficient fine-tuning methods such as LoRA~\parencite{lora}.
+Early attempts shown promising results in alleviating hallucinations with fine-tuning~\parencite{wei2021finetuned}. Indeed, noticeable performance improvements have been observed in biomedical QA tasks by fine-tuning LLMs on well-labelled biomedical datasets, such as in PMC-LLaMA~\parencite{pmc-llama} and Med-Alpaca~\parencite{medalpaca}.
+However, these fine-tuning methods often require a large number of annotated data (e.g., one million tokens) in Question-Answer pairs or Instruction-Input-Output formats. In practice, such data is often scarce due to the high annotation cost. 
+In addition, the fine-tuning methods also require high computational resources as the scale of LLM parameters increases.
+
+On the other hand, external resources augmented methods explores the use of external resources such as databases, APIs, and Knowledge Graphs (KGs) to augment the LLM generation process. 
+A representative approach is the Retrieval Augmented Generation (RAG) based methods ~\parencite{rag, paperqa, rqrag} which retrieve top relevant documents from an external domain-specific database as contexts to enrich LLM response generation. Although promising results have been achieved on benchmarking datasets, RAG-based methods are susceptible to knowledge noise~\parencite{kbert}, i.e., not all retrieved knowledge is relevant to the target question. Feeding less question-relevant information to an LLM may risk distorting the meaning of the original question, potentially diverting the LLM's focus from accurately understanding the question provided. To address this issue, fine-tuning methods are employed to enhance the LLM's robustness to noisy knowledge
+rather than explicitly injecting domain-specific knowledge. 
+
+Very recently, research studies have attempted to investigate the use of a domain-specific Knowledge Graph (KG) as the knowledge
+provider to augment LLM response generation ~\parencite{gnp, graph-prompter, kalm-prompting}.
+This line of research leverages knowledge triplets to represent factual information, represented as $(e_h, r, e_t)$ where $e_h, e_t$ are the head and tail entities and $r$ represents the relation associated with them (e.g.\ [\texttt{Canberra, CapitalOf, Australia}]).
+By utilising the representation power of LLMs and relational information contained in KGs, there is considerable potential in enhancing knowledge representations via information exchange between KGs and LLMs.
+% While these methods are less data-dependent and are often model-agnostic, however, how to best fuse the heterogeneous information between KGs and LLMs for question answering remains an open research challenge.
+
+Based on the above observations, we intend to research on the integration between KGs and LLMs for domain-specific question-answering tasks. 
+At a higher level, we tackle LLM domain-specific question-asnwering task with the objectives to achieve data-efficiency (low dependence on labeled training dataset) and parameter-efficieny (small-scale of trainable model parameters).
+To achieve this, first we plan to utilise context aware graph pruning methods to remove redundant knowledge from the KGs to the maximum extent to mitigate the drawbacks of knowledge noise. 
+We will further investigate the current methods of the knowledge encoder modules to formulate a graph representation learning algorithm based on information theory. 
+Finally, we research on methods to effectively fuse the text modality and the graph modality together to enrich the representation space of the LLM using our learned knowledge embeddings.

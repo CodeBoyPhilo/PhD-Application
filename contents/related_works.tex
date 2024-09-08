@@ -1,0 +1,32 @@
+\section*{Related Words}
+
+In this section, we first present an overview of the related literature, including Knowledge Graph-based question answering over KGs and LLM domain-specific question answering.
+
+\textbf{Knowledge Graph Based Question Answering. }
+To begin, we first define a Knowledge Graph as the following:
+\begin{definition}
+    \emph{A Knowledge Graph is a set of: $\mathcal G = \set{\mathcal E, \mathcal R, \mathcal T}$, where $\mathcal E$ corresponds to a set of entities (nodes),
+    $\mathcal R$ refers to a set of relations (edges) between entities,
+    and $\mathcal T$ denotes the set of knowledge triplets: $\mathcal T = \set{(e_h,r,e_t)\in \mathcal E\times \mathcal R\times \mathcal E}$, with $e_h, e_t \in \mathcal E$ denoting the head and tail entities
+    and $r\in\mathcal R$ is the relation that connects them.}
+\end{definition}
+
+Recent works have explicitly followed an extract-encode-fuse paradigm to tackle KG-based question answering tasks.
+Specifically, they first assume a prior established KG exists and extract a subgraph for a given question via entity linking and path finding. 
+They further encode the question and the subgraph separately using a pre-trained language model (LM) and a graph encoder such as Graph Neural Networks (GNN), and fuse the two heterogeneous representations to generate the final answer.
+For example, QAGNN~\parencite{qagnn} used a Graph Attention Network (GAT)~\parencite{gat} as the graph encoder and have defined a context node in the graph structure to store the question context information. 
+Through the graph connectivity, the encoder iteratively updates the entity representations by attending to context-relevant neighbouring nodes.
+Moreover, GreaseLM and Dragon~\parencite{greaselm, dragon} have further introduced a cross-modal fuser to encourage information exchange between the graph and text modalities. 
+In contrast, QAT and GRT~\parencite{qat, grt} proposed to encode the KG on a triplet or path level to preserve the relational information.
+Furthermore, to improve the knowledge embedding, FiTs~\parencite{fits} have incorporated a contrastive learning objective to align the graph and LM representations of the same concept. 
+
+\textbf{LLM Domain-Specific Question Answering. }
+In domain-specific fine-tuning, existing methods typically focused on injecting domain-specific knowledge into the LLM by updating the model parameters on a full-scale or only a subset of the parameters \parencite{pmc-llama, medalpaca, llava-med}. 
+On the other hand, external resources augmented methods such as RAG-based approaches typically inject the domain expertise knowledge on a input level.
+As such, their common focus is how to extract the correct knowledge from external resources, as well as how to teach the LLM to use these new knowledge effectively~\parencite{knowpat, radit}. 
+As a subset of RAG-based methods, KG-augmented methods rely on a domain-specific Knowledge Graph as the knowledge provider.
+However, since the graph connectivity structure naturally differs from flat texts, KG-based methods emphasised on how to integrate the graph representation to the text modality the LLM can comprehend. 
+For instance, KAPING~\parencite{kalm-prompting} flattens the retrieved subgraph and directly inputs the text attributes of the knowledge triplets to the LLM. 
+Orthogonally, GNP~\parencite{gnp} builds on KGQA methods and pools the graph representation learned with GNNs and appends the knowledge embeddings to the question embeddings to form a \emph{soft-prompt} \parencite{prompt-tuning}.
+
+

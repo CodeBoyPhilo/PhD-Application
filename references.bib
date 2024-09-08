@@ -1,0 +1,1155 @@
+@misc{un-adapt,
+  title = {Unsupervised LLM Adaptation for Question Answering},
+  author = {Kuniaki Saito and Kihyuk Sohn and Chen-Yu Lee and Yoshitaka Ushiku},
+  year = {2024},
+  eprint = {2402.12170},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+}
+
+@misc{raft,
+  title = {RAFT: Adapting Language Model to Domain Specific RAG},
+  author = {Tianjun Zhang and Shishir G. Patil and Naman Jain and Sheng Shen and
+            Matei Zaharia and Ion Stoica and Joseph E. Gonzalez},
+  year = {2024},
+  eprint = {2403.10131},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+}
+
+@misc{make-a-choice,
+  title = {Make a Choice! Knowledge Base Question Answering with In-Context
+           Learning},
+  author = {Chuanyuan Tan and Yuehe Chen and Wenbiao Shao and Wenliang Chen},
+  year = {2023},
+  eprint = {2305.13972},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+}
+
+@misc{chameleon,
+  title = {Chameleon: Plug-and-Play Compositional Reasoning with Large Language
+           Models},
+  author = {Pan Lu and Baolin Peng and Hao Cheng and Michel Galley and Kai-Wei
+            Chang and Ying Nian Wu and Song-Chun Zhu and Jianfeng Gao},
+  year = {2023},
+  eprint = {2304.09842},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+}
+
+@misc{react,
+  title = {ReAct: Synergizing Reasoning and Acting in Language Models},
+  author = {Shunyu Yao and Jeffrey Zhao and Dian Yu and Nan Du and Izhak Shafran
+            and Karthik Narasimhan and Yuan Cao},
+  year = {2023},
+  eprint = {2210.03629},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+}
+
+@misc{triad,
+  title = {Triad: A Framework Leveraging a Multi-Role LLM-based Agent to Solve
+           Knowledge Base Question Answering},
+  author = {Chang Zong and Yuchen Yan and Weiming Lu and Eliot Huang and Jian
+            Shao and Yueting Zhuang},
+  year = {2024},
+  eprint = {2402.14320},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+}
+
+@inproceedings{kbert,
+  title = {K-BERT: Enabling Language Representation with Knowledge Graph},
+  author = {Liu, W. and Zhou, P. and Zhao, Z. and Wang, Z. and Ju, Q. and Deng,
+            H. and Wang, P.},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume = {34},
+  number = {03},
+  pages = {2901--2908},
+  year = {2020},
+  organization = {AAAI},
+  doi = {10.1609/aaai.v34i03.5681},
+}
+
+@inproceedings{embedkgqa,
+  title = "Improving Multi-hop Question Answering over Knowledge Graphs using
+           Knowledge Base Embeddings",
+  author = "Saxena, Apoorv and Tripathi, Aditay and Talukdar, Partha",
+  editor = "Jurafsky, Dan and Chai, Joyce and Schluter, Natalie and Tetreault,
+            Joel",
+  booktitle = "Proceedings of the 58th Annual Meeting of the Association for
+               Computational Linguistics",
+  month = jul,
+  year = "2020",
+  address = "Online",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2020.acl-main.412",
+  doi = "10.18653/v1/2020.acl-main.412",
+  pages = "4498--4507",
+  abstract = "Knowledge Graphs (KG) are multi-relational graphs consisting of
+              entities as nodes and relations among them as typed edges. Goal of
+              the Question Answering over KG (KGQA) task is to answer natural
+              language queries posed over the KG. Multi-hop KGQA requires
+              reasoning over multiple edges of the KG to arrive at the right
+              answer. KGs are often incomplete with many missing links, posing
+              additional challenges for KGQA, especially for multi-hop KGQA.
+              Recent research on multi-hop KGQA has attempted to handle KG
+              sparsity using relevant external text, which isn{'}t always readily
+              available. In a separate line of research, KG embedding methods
+              have been proposed to reduce KG sparsity by performing missing link
+              prediction. Such KG embedding methods, even though highly relevant,
+              have not been explored for multi-hop KGQA so far. We fill this gap
+              in this paper and propose EmbedKGQA. EmbedKGQA is particularly
+              effective in performing multi-hop KGQA over sparse KGs. EmbedKGQA
+              also relaxes the requirement of answer selection from a
+              pre-specified neighborhood, a sub-optimal constraint enforced by
+              previous multi-hop KGQA methods. Through extensive experiments on
+              multiple benchmark datasets, we demonstrate EmbedKGQA{'}s
+              effectiveness over other state-of-the-art baselines.",
+}
+
+@inproceedings{qagnn,
+  title = "{QA}-{GNN}: Reasoning with Language Models and Knowledge Graphs for
+           Question Answering",
+  author = "Yasunaga, Michihiro and Ren, Hongyu and Bosselut, Antoine and Liang,
+            Percy and Leskovec, Jure",
+  editor = "Toutanova, Kristina and Rumshisky, Anna and Zettlemoyer, Luke and
+            Hakkani-Tur, Dilek and Beltagy, Iz and Bethard, Steven and Cotterell,
+            Ryan and Chakraborty, Tanmoy and Zhou, Yichao",
+  booktitle = "Proceedings of the 2021 Conference of the North American Chapter
+               of the Association for Computational Linguistics: Human Language
+               Technologies",
+  month = jun,
+  year = "2021",
+  address = "Online",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2021.naacl-main.45",
+  doi = "10.18653/v1/2021.naacl-main.45",
+  pages = "535--546",
+  abstract = "The problem of answering questions using knowledge from
+              pre-trained language models (LMs) and knowledge graphs (KGs)
+              presents two challenges: given a QA context (question and answer
+              choice), methods need to (i) identify relevant knowledge from large
+              KGs, and (ii) perform joint reasoning over the QA context and KG.
+              Here we propose a new model, QA-GNN, which addresses the above
+              challenges through two key innovations: (i) relevance scoring,
+              where we use LMs to estimate the importance of KG nodes relative to
+              the given QA context, and (ii) joint reasoning, where we connect
+              the QA context and KG to form a joint graph, and mutually update
+              their representations through graph-based message passing. We
+              evaluate QA-GNN on the CommonsenseQA and OpenBookQA datasets, and
+              show its improvement over existing LM and LM+KG models, as well as
+              its capability to perform interpretable and structured reasoning,
+              e.g., correctly handling negation in questions.",
+}
+
+@inproceedings{greaselm,
+  title = {GreaseLM: Graph REASoning Enhanced Language Models},
+  author = {Zhang, Xikun and Bosselut, Antoine and Yasunaga, Michihiro and Ren,
+            Hongyu and Liang, Percy and Manning, Christopher D and Leskovec, Jure
+            },
+  booktitle = {International Conference on Learning Representations},
+  year = {2021},
+}
+
+@misc{kgr,
+  title = {Mitigating Large Language Model Hallucinations via Autonomous
+           Knowledge Graph-based Retrofitting},
+  author = {Xinyan Guan and Yanjiang Liu and Hongyu Lin and Yaojie Lu and Ben He
+            and Xianpei Han and Le Sun},
+  year = {2023},
+  eprint = {2311.13314},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+}
+
+@inproceedings{dragon,
+  author = {Yasunaga, Michihiro and Bosselut, Antoine and Ren, Hongyu and Zhang,
+            Xikun and Manning, Christopher D and Liang, Percy S and Leskovec,
+            Jure},
+  booktitle = {Advances in Neural Information Processing Systems},
+  editor = {S. Koyejo and S. Mohamed and A. Agarwal and D. Belgrave and K. Cho
+            and A. Oh},
+  pages = {37309--37323},
+  publisher = {Curran Associates, Inc.},
+  title = {Deep Bidirectional Language-Knowledge Graph Pretraining},
+  volume = {35},
+  year = {2022},
+}
+
+@misc{knowpat,
+  title = {Knowledgeable Preference Alignment for LLMs in Domain-specific
+           Question Answering},
+  author = {Yichi Zhang and Zhuo Chen and Yin Fang and Yanxi Lu and Fangming Li
+            and Wen Zhang and Huajun Chen},
+  year = {2024},
+  eprint = {2311.06503},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+}
+
+@inproceedings{rag,
+  author = {Lewis, Patrick and Perez, Ethan and Piktus, Aleksandra and Petroni,
+            Fabio and Karpukhin, Vladimir and Goyal, Naman and K\"{u}ttler,
+            Heinrich and Lewis, Mike and Yih, Wen-tau and Rockt\"{a}schel, Tim
+            and Riedel, Sebastian and Kiela, Douwe},
+  title = {Retrieval-augmented generation for knowledge-intensive NLP tasks},
+  year = {2020},
+  isbn = {9781713829546},
+  publisher = {Curran Associates Inc.},
+  address = {Red Hook, NY, USA},
+  abstract = {Large pre-trained language models have been shown to store factual
+              knowledge in their parameters, and achieve state-of-the-art results
+              when fine-tuned on downstream NLP tasks. However, their ability to
+              access and precisely manipulate knowledge is still limited, and
+              hence on knowledge-intensive tasks, their performance lags behind
+              task-specific architectures. Additionally, providing provenance for
+              their decisions and updating their world knowledge remain open
+              research problems. Pre-trained models with a differentiable access
+              mechanism to explicit non-parametric memory can overcome this issue
+              , but have so far been only investigated for extractive downstream
+              tasks. We explore a general-purpose fine-tuning recipe for
+              retrieval-augmented generation (RAG) — models which combine
+              pre-trained parametric and non-parametric memory for language
+              generation. We introduce RAG models where the parametric memory is
+              a pre-trained seq2seq model and the non-parametric memory is a
+              dense vector index of Wikipedia, accessed with a pre-trained neural
+              retriever. We compare two RAG formulations, one which conditions on
+              the same retrieved passages across the whole generated sequence,
+              and another which can use different passages per token. We
+              fine-tune and evaluate our models on a wide range of
+              knowledge-intensive NLP tasks and set the state of the art on three
+              open domain QA tasks, outperforming parametric seq2seq models and
+              task-specific retrieve-and-extract architectures. For language
+              generation tasks, we find that RAG models generate more specific,
+              diverse and factual language than a state-of-the-art
+              parametric-only seq2seq baseline.},
+  booktitle = {Proceedings of the 34th International Conference on Neural
+               Information Processing Systems},
+  articleno = {793},
+  numpages = {16},
+  location = {<conf-loc>, <city>Vancouver</city>, <state>BC</state>,
+              <country>Canada</country>, </conf-loc>},
+  series = {NIPS '20},
+}
+
+@article{leancontext,
+  title = {LeanContext: Cost-efficient domain-specific question answering using
+           LLMs},
+  journal = {Natural Language Processing Journal},
+  volume = {7},
+  pages = {100065},
+  year = {2024},
+  issn = {2949-7191},
+  doi = {https://doi.org/10.1016/j.nlp.2024.100065},
+  url = {https://www.sciencedirect.com/science/article/pii/S294971912400013X},
+  author = {Md Adnan Arefeen and Biplob Debnath and Srimat Chakradhar},
+  keywords = {Domain-specific question answering, Cost-efficient LLMs, Large
+              language models, Reinforcement learning, Text summarization},
+}
+
+@misc{paperqa,
+  title = {PaperQA: Retrieval-Augmented Generative Agent for Scientific Research
+           },
+  author = {Jakub Lála and Odhran O'Donoghue and Aleksandar Shtedritski and Sam
+            Cox and Samuel G. Rodriques and Andrew D. White},
+  year = {2023},
+  eprint = {2312.07559},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+}
+
+@article{selfrag,
+  author = {Asai, Akari and Wu, Zeqiu and Wang, Yizhong and Sil, Avirup and
+            Hajishirzi, Hannaneh},
+  title = {{Self-RAG}: Learning to Retrieve, Generate, and Critique through
+           Self-Reflection},
+  year = {2023},
+  journal = {arXiv preprint arXiv:2310.11511},
+  url = {https://arxiv.org/abs/2310.11511},
+}
+
+@misc{rqrag,
+  title = {RQ-RAG: Learning to Refine Queries for Retrieval Augmented Generation
+           },
+  author = {Chi-Min Chan and Chunpu Xu and Ruibin Yuan and Hongyin Luo and Wei
+            Xue and Yike Guo and Jie Fu},
+  year = {2024},
+  eprint = {2404.00610},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+}
+
+@misc{radit,
+  title = {RA-DIT: Retrieval-Augmented Dual Instruction Tuning},
+  author = {Xi Victoria Lin and Xilun Chen and Mingda Chen and Weijia Shi and
+            Maria Lomeli and Rich James and Pedro Rodriguez and Jacob Kahn and
+            Gergely Szilvasy and Mike Lewis and Luke Zettlemoyer and Scott Yih},
+  year = {2023},
+  eprint = {2310.01352},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+}
+
+@misc{nlirag,
+  title = {Making Retrieval-Augmented Language Models Robust to Irrelevant
+           Context},
+  author = {Ori Yoran and Tomer Wolfson and Ori Ram and Jonathan Berant},
+  year = {2023},
+  eprint = {2310.01558},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+}
+
+@inproceedings{yih-sp,
+  title = "Semantic Parsing via Staged Query Graph Generation: Question
+           Answering with Knowledge Base",
+  author = "Yih, Wen-tau and Chang, Ming-Wei and He, Xiaodong and Gao, Jianfeng",
+  editor = "Zong, Chengqing and Strube, Michael",
+  booktitle = "Proceedings of the 53rd Annual Meeting of the Association for
+               Computational Linguistics and the 7th International Joint
+               Conference on Natural Language Processing (Volume 1: Long Papers)",
+  month = jul,
+  year = "2015",
+  address = "Beijing, China",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/P15-1128",
+  doi = "10.3115/v1/P15-1128",
+  pages = "1321--1331",
+}
+
+@inproceedings{mulcg,
+  title = "Constraint-Based Question Answering with Knowledge Graph",
+  author = "Bao, Junwei and Duan, Nan and Yan, Zhao and Zhou, Ming and Zhao,
+            Tiejun",
+  editor = "Matsumoto, Yuji and Prasad, Rashmi",
+  booktitle = "Proceedings of {COLING} 2016, the 26th International Conference
+               on Computational Linguistics: Technical Papers",
+  month = dec,
+  year = "2016",
+  address = "Osaka, Japan",
+  publisher = "The COLING 2016 Organizing Committee",
+  url = "https://aclanthology.org/C16-1236",
+  pages = "2503--2514",
+  abstract = "WebQuestions and SimpleQuestions are two benchmark data-sets
+              commonly used in recent knowledge-based question answering (KBQA)
+              work. Most questions in them are {`}simple{'} questions which can
+              be answered based on a single relation in the knowledge base. Such
+              data-sets lack the capability of evaluating KBQA systems on
+              complicated questions. Motivated by this issue, we release a new
+              data-set, namely ComplexQuestions, aiming to measure the quality of
+              KBQA systems on {`}multi-constraint{'} questions which require
+              multiple knowledge base relations to get the answer. Beside, we
+              propose a novel systematic KBQA approach to solve multi-constraint
+              questions. Compared to state-of-the-art methods, our approach not
+              only obtains comparable results on the two existing benchmark
+              data-sets, but also achieves significant improvements on the
+              ComplexQuestions.",
+}
+
+@inproceedings{keqa,
+  author = {Huang, Xiao and Zhang, Jingyuan and Li, Dingcheng and Li, Ping},
+  title = {Knowledge Graph Embedding Based Question Answering},
+  year = {2019},
+  isbn = {9781450359405},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3289600.3290956},
+  doi = {10.1145/3289600.3290956},
+  abstract = {Question answering over knowledge graph (QA-KG) aims to use facts
+              in the knowledge graph (KG) to answer natural language questions.
+              It helps end users more efficiently and more easily access the
+              substantial and valuable knowledge in the KG, without knowing its
+              data structures. QA-KG is a nontrivial problem since capturing the
+              semantic meaning of natural language is difficult for a machine.
+              Meanwhile, many knowledge graph embedding methods have been
+              proposed. The key idea is to represent each predicate/entity as a
+              low-dimensional vector, such that the relation information in the
+              KG could be preserved. The learned vectors could benefit various
+              applications such as KG completion and recommender systems. In this
+              paper, we explore to use them to handle the QA-KG problem. However,
+              this remains a challenging task since a predicate could be
+              expressed in different ways in natural language questions. Also,
+              the ambiguity of entity names and partial names makes the number of
+              possible answers large. To bridge the gap, we propose an effective
+              Knowledge Embedding based Question Answering (KEQA) framework. We
+              focus on answering the most common types of questions, i.e., simple
+              questions, in which each question could be answered by the machine
+              straightforwardly if its single head entity and single predicate
+              are correctly identified. To answer a simple question, instead of
+              inferring its head entity and predicate directly, KEQA targets at
+              jointly recovering the question's head entity, predicate, and tail
+              entity representations in the KG embedding spaces. Based on a
+              carefully-designed joint distance metric, the three learned
+              vectors' closest fact in the KG is returned as the answer.
+              Experiments on a widely-adopted benchmark demonstrate that the
+              proposed KEQA outperforms the state-of-the-art QA-KG methods.},
+  booktitle = {Proceedings of the Twelfth ACM International Conference on Web
+               Search and Data Mining},
+  pages = {105–113},
+  numpages = {9},
+  keywords = {deep learning, knowledge graph embedding, question answering},
+  location = {Melbourne VIC, Australia},
+  series = {WSDM '19},
+}
+
+@inproceedings{joint-kgc-qa,
+  author = {Liu, Lihui and Du, Boxin and Xu, Jiejun and Xia, Yinglong and Tong,
+            Hanghang},
+  title = {Joint Knowledge Graph Completion and Question Answering},
+  year = {2022},
+  isbn = {9781450393850},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3534678.3539289},
+  doi = {10.1145/3534678.3539289},
+  abstract = {Knowledge graph reasoning plays a pivotal role in many real-world
+              applications, such as network alignment, computational
+              fact-checking, recommendation, and many more. Among these
+              applications, knowledge graph completion (KGC) and multi-hop
+              question answering over knowledge graph (Multi-hop KGQA) are two
+              representative reasoning tasks. In the vast majority of the
+              existing works, the two tasks are considered separately with
+              different models or algorithms. However, we envision that KGC and
+              Multi-hop KGQA are closely related to each other. Therefore, the
+              two tasks will benefit from each other if they are approached
+              adequately. In this work, we propose a neural model named BiNet to
+              jointly handle KGC and multi-hop KGQA, and formulate it as a
+              multi-task learning problem. Specifically, our proposed model
+              leverages a shared embedding space and an answer scoring module,
+              which allows the two tasks to automatically share latent features
+              and learn the interactions between natural language question
+              decoder and answer scoring module. Compared to the existing methods
+              , the proposed BiNet model addresses both multi-hop KGQA and KGC
+              tasks simultaneously with superior performance. Experiment results
+              show that BiNet outperforms state-of-the-art methods on a wide
+              range of KGQA and KGC benchmark datasets.},
+  booktitle = {Proceedings of the 28th ACM SIGKDD Conference on Knowledge
+               Discovery and Data Mining},
+  pages = {1098–1108},
+  numpages = {11},
+  keywords = {multi-task learning, knowledge graph question answering, knowledge
+              graph completion},
+  location = {Washington DC, USA},
+  series = {KDD '22},
+}
+
+@inproceedings{kagnet,
+  title = "{K}ag{N}et: Knowledge-Aware Graph Networks for Commonsense Reasoning",
+  author = "Lin, Bill Yuchen and Chen, Xinyue and Chen, Jamin and Ren, Xiang",
+  editor = "Inui, Kentaro and Jiang, Jing and Ng, Vincent and Wan, Xiaojun",
+  booktitle = "Proceedings of the 2019 Conference on Empirical Methods in
+               Natural Language Processing and the 9th International Joint
+               Conference on Natural Language Processing (EMNLP-IJCNLP)",
+  month = nov,
+  year = "2019",
+  address = "Hong Kong, China",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/D19-1282",
+  doi = "10.18653/v1/D19-1282",
+  pages = "2829--2839",
+  abstract = "Commonsense reasoning aims to empower machines with the human
+              ability to make presumptions about ordinary situations in our daily
+              life. In this paper, we propose a textual inference framework for
+              answering commonsense questions, which effectively utilizes
+              external, structured commonsense knowledge graphs to perform
+              explainable inferences. The framework first grounds a
+              question-answer pair from the semantic space to the knowledge-based
+              symbolic space as a schema graph, a related sub-graph of external
+              knowledge graphs. It represents schema graphs with a novel
+              knowledge-aware graph network module named KagNet, and finally
+              scores answers with graph representations. Our model is based on
+              graph convolutional networks and LSTMs, with a hierarchical
+              path-based attention mechanism. The intermediate attention scores
+              make it transparent and interpretable, which thus produce
+              trustworthy inferences. Using ConceptNet as the only external
+              resource for Bert-based models, we achieved state-of-the-art
+              performance on the CommonsenseQA, a large-scale dataset for
+              commonsense reasoning.",
+}
+
+@inproceedings{mhgrn,
+  title = "Scalable Multi-Hop Relational Reasoning for Knowledge-Aware Question
+           Answering",
+  author = "Feng, Yanlin and Chen, Xinyue and Lin, Bill Yuchen and Wang, Peifeng
+            and Yan, Jun and Ren, Xiang",
+  editor = "Webber, Bonnie and Cohn, Trevor and He, Yulan and Liu, Yang",
+  booktitle = "Proceedings of the 2020 Conference on Empirical Methods in
+               Natural Language Processing (EMNLP)",
+  month = nov,
+  year = "2020",
+  address = "Online",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/2020.emnlp-main.99",
+  doi = "10.18653/v1/2020.emnlp-main.99",
+  pages = "1295--1309",
+  abstract = "Existing work on augmenting question answering (QA) models with
+              external knowledge (e.g., knowledge graphs) either struggle to
+              model multi-hop relations efficiently, or lack transparency into
+              the model{'}s prediction rationale. In this paper, we propose a
+              novel knowledge-aware approach that equips pre-trained language
+              models (PTLMs) has with a multi-hop relational reasoning module,
+              named multi-hop graph relation network (MHGRN). It performs
+              multi-hop, multi-relational reasoning over subgraphs extracted from
+              external knowledge graphs. The proposed reasoning module unifies
+              path-based reasoning methods and graph neural networks to achieve
+              better interpretability and scalability. We also empirically show
+              its effectiveness and scalability on CommonsenseQA and OpenbookQA
+              datasets, and interpret its behaviors with case studies, with the
+              code for experiments released.",
+}
+
+%@inproceedings{graph-reasoning,
+  % = title=,
+}{Graph-based reasoning over heterogeneous external knowledge for commonsense question answering},
+%  author={Lv, Shangwen and Guo, Daya and Xu, Jingjing and Tang, Duyu and Duan, Nan and Gong, Ming and Shou, Linjun and Jiang, Daxin and Cao, Guihong and Hu, Songlin},
+%  booktitle={Proceedings of the AAAI conference on artificial intelligence},
+%  volume={34},
+%  number={05},
+%  pages={8449--8456},
+%  year={2020}
+%}
+
+%@inproceedings{knowledge-prompting,
+  % = title=,
+}{Knowledge graph prompting for multi-document question answering},
+%  author={Wang, Yu and Lipka, Nedim and Rossi, Ryan A and Siu, Alexa and Zhang, Ruiyi and Derr, Tyler},
+%  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+%  volume={38},
+%  number={17},
+%  pages={19206--19214},
+%  year={2024}
+%}
+
+@article{glam,
+  title = {GLaM: Fine-Tuning Large Language Models for Domain Knowledge Graph
+           Alignment via Neighborhood Partitioning and Generative Subgraph
+           Encoding},
+  author = {Dernbach, Stefan and Agarwal, Khushbu and Zuniga, Alejandro and
+            Henry, Michael and Choudhury, Sutanay},
+  journal = {arXiv preprint arXiv:2402.06764},
+  year = {2024},
+}
+
+@inproceedings{cyberq,
+  title = {CyberQ: Generating Questions and Answers for Cybersecurity Education
+           Using Knowledge Graph-Augmented LLMs},
+  author = {Agrawal, Garima and Pal, Kuntal and Deng, Yuli and Liu, Huan and
+            Chen, Ying-Chih},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume = {38},
+  number = {21},
+  pages = {23164--23172},
+  year = {2024},
+}
+
+@article{kalm-prompting,
+  title = {Knowledge-augmented language model prompting for zero-shot knowledge
+           graph question answering},
+  author = {Baek, Jinheon and Aji, Alham Fikri and Saffari, Amir},
+  journal = {arXiv preprint arXiv:2306.04136},
+  year = {2023},
+}
+
+@inproceedings{gnp,
+  title = {Graph neural prompting with large language models},
+  author = {Tian, Yijun and Song, Huan and Wang, Zichen and Wang, Haozhu and Hu,
+            Ziqing and Wang, Fang and Chawla, Nitesh V and Xu, Panpan},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume = {38},
+  number = {17},
+  pages = {19080--19088},
+  year = {2024},
+}
+
+@article{brown2020language,
+  title = {Language models are few-shot learners},
+  author = {Brown, Tom and Mann, Benjamin and Ryder, Nick and Subbiah, Melanie
+            and Kaplan, Jared D and Dhariwal, Prafulla and Neelakantan, Arvind
+            and Shyam, Pranav and Sastry, Girish and Askell, Amanda and others},
+  journal = {Advances in neural information processing systems},
+  volume = {33},
+  pages = {1877--1901},
+  year = {2020},
+}
+
+@article{prompt-tuning,
+  title = {The power of scale for parameter-efficient prompt tuning},
+  author = {Lester, Brian and Al-Rfou, Rami and Constant, Noah},
+  journal = {arXiv preprint arXiv:2104.08691},
+  year = {2021},
+}
+
+@article{p-tuning,
+  title = {GPT understands, too},
+  journal = {AI Open},
+  year = {2023},
+  issn = {2666-6510},
+  doi = {https://doi.org/10.1016/j.aiopen.2023.08.012},
+  url = {https://www.sciencedirect.com/science/article/pii/S2666651023000141},
+  author = {Xiao Liu and Yanan Zheng and Zhengxiao Du and Ming Ding and Yujie
+            Qian and Zhilin Yang and Jie Tang},
+  keywords = {Pre-trained language models, Prompt tuning, Natural language
+              understanding},
+  abstract = {Prompting a pretrained language model with natural language
+              patterns has been proved effective for natural language
+              understanding (NLU). However, our preliminary study reveals that
+              manual discrete prompts often lead to unstable performance—e.g.,
+              changing a single word in the prompt might result in substantial
+              performance drop. We propose a novel method P-Tuning that employs
+              trainable continuous prompt embeddings in concatenation with
+              discrete prompts. Empirically, P-Tuning not only stabilizes
+              training by minimizing the gap between various discrete prompts,
+              but also improves performance by a sizeable margin on a wide range
+              of NLU tasks including LAMA and SuperGLUE. P-Tuning is generally
+              effective for both frozen and tuned language models, under both the
+              fully-supervised and few-shot settings.},
+}
+
+@article{instructzero,
+  title = {Instructzero: Efficient instruction optimization for black-box large
+           language models},
+  author = {Chen, Lichang and Chen, Jiuhai and Goldstein, Tom and Huang, Heng
+            and Zhou, Tianyi},
+  journal = {arXiv preprint arXiv:2306.03082},
+  year = {2023},
+}
+
+@article{apo,
+  title = {Automatic prompt optimization with" gradient descent" and beam search
+           },
+  author = {Pryzant, Reid and Iter, Dan and Li, Jerry and Lee, Yin Tat and Zhu,
+            Chenguang and Zeng, Michael},
+  journal = {arXiv preprint arXiv:2305.03495},
+  year = {2023},
+}
+
+@article{graph-prompter,
+  title = {Can we soft prompt LLMs for graph learning tasks?},
+  author = {Liu, Zheyuan and He, Xiaoxin and Tian, Yijun and Chawla, Nitesh V},
+  journal = {arXiv preprint arXiv:2402.10359},
+  year = {2024},
+}
+
+@article{transe,
+  title = {Translating embeddings for modeling multi-relational data},
+  author = {Bordes, Antoine and Usunier, Nicolas and Garcia-Duran, Alberto and
+            Weston, Jason and Yakhnenko, Oksana},
+  journal = {Advances in neural information processing systems},
+  volume = {26},
+  year = {2013},
+}
+
+@inproceedings{complex,
+  title = {Complex embeddings for simple link prediction},
+  author = {Trouillon, Th{\'e}o and Welbl, Johannes and Riedel, Sebastian and
+            Gaussier, {\'E}ric and Bouchard, Guillaume},
+  booktitle = {International conference on machine learning},
+  pages = {2071--2080},
+  year = {2016},
+  organization = {PMLR},
+}
+
+@inproceedings{mpnn,
+  title = {Neural message passing for quantum chemistry},
+  author = {Gilmer, Justin and Schoenholz, Samuel S and Riley, Patrick F and
+            Vinyals, Oriol and Dahl, George E},
+  booktitle = {International conference on machine learning},
+  pages = {1263--1272},
+  year = {2017},
+  organization = {PMLR},
+}
+
+@article{gcn,
+  title = {Semi-supervised classification with graph convolutional networks},
+  author = {Kipf, Thomas N and Welling, Max},
+  journal = {arXiv preprint arXiv:1609.02907},
+  year = {2016},
+}
+
+@article{gat,
+  title = {Graph attention networks},
+  author = {Velickovic, Petar and Cucurull, Guillem and Casanova, Arantxa and
+            Romero, Adriana and Lio, Pietro and Bengio, Yoshua and others},
+  journal = {stat},
+  volume = {1050},
+  number = {20},
+  pages = {10--48550},
+  year = {2017},
+}
+
+@article{cot,
+  title = {Chain-of-thought prompting elicits reasoning in large language models
+           },
+  author = {Wei, Jason and Wang, Xuezhi and Schuurmans, Dale and Bosma, Maarten
+            and Xia, Fei and Chi, Ed and Le, Quoc V and Zhou, Denny and others},
+  journal = {Advances in neural information processing systems},
+  volume = {35},
+  pages = {24824--24837},
+  year = {2022},
+}
+
+@article{pmc-llama,
+  author = {Wu, Chaoyi and Lin, Weixiong and Zhang, Xiaoman and Zhang, Ya and
+            Xie, Weidi and Wang, Yanfeng},
+  title = "{PMC-LLaMA: toward building open-source language models for medicine}
+           ",
+  journal = {Journal of the American Medical Informatics Association},
+  pages = {ocae045},
+  year = {2024},
+  month = apr,
+  abstract = "{Recently, large language models (LLMs) have showcased remarkable
+              capabilities in natural language understanding. While demonstrating
+              proficiency in everyday conversations and question-answering (QA)
+              situations, these models frequently struggle in domains that
+              require precision, such as medical applications, due to their lack
+              of domain-specific knowledge. In this article, we describe the
+              procedure for building a powerful, open-source language model
+              specifically designed for medicine applications, termed as
+              PMC-LLaMA.We adapt a general-purpose LLM toward the medical domain,
+              involving data-centric knowledge injection through the integration
+              of 4.8M biomedical academic papers and 30K medical textbooks, as
+              well as comprehensive domain-specific instruction fine-tuning,
+              encompassing medical QA, rationale for reasoning, and
+              conversational dialogues with 202M tokens.While evaluating various
+              public medical QA benchmarks and manual rating, our lightweight
+              PMC-LLaMA, which consists of only 13B parameters, exhibits superior
+              performance, even surpassing ChatGPT. All models, codes, and
+              datasets for instruction tuning will be released to the research
+              community.Our contributions are 3-fold: (1) we build up an
+              open-source LLM toward the medical domain. We believe the proposed
+              PMC-LLaMA model can promote further development of foundation
+              models in medicine, serving as a medical trainable basic generative
+              language backbone; (2) we conduct thorough ablation studies to
+              demonstrate the effectiveness of each proposed component,
+              demonstrating how different training data and model scales affect
+              medical LLMs; (3) we contribute a large-scale, comprehensive
+              dataset for instruction tuning.In this article, we systematically
+              investigate the process of building up an open-source
+              medical-specific LLM, PMC-LLaMA.}",
+  issn = {1527-974X},
+  doi = {10.1093/jamia/ocae045},
+  url = {https://doi.org/10.1093/jamia/ocae045},
+  eprint = {
+            https://academic.oup.com/jamia/advance-article-pdf/doi/10.1093/jamia/ocae045/57229449/ocae045.pdf
+            },
+}
+
+@article{medalpaca,
+  title = {MedAlpaca--an open-source collection of medical conversational AI
+           models and training data},
+  author = {Han, Tianyu and Adams, Lisa C and Papaioannou, Jens-Michalis and
+            Grundmann, Paul and Oberhauser, Tom and L{\"o}ser, Alexander and
+            Truhn, Daniel and Bressem, Keno K},
+  journal = {arXiv preprint arXiv:2304.08247},
+  year = {2023},
+}
+
+@article{lora,
+  title = {Lora: Low-rank adaptation of large language models},
+  author = {Hu, Edward J and Shen, Yelong and Wallis, Phillip and Allen-Zhu,
+            Zeyuan and Li, Yuanzhi and Wang, Shean and Wang, Lu and Chen, Weizhu},
+  journal = {arXiv preprint arXiv:2106.09685},
+  year = {2021},
+}
+
+@article{llava-med,
+  title = {Llava-med: Training a large language-and-vision assistant for
+           biomedicine in one day},
+  author = {Li, Chunyuan and Wong, Cliff and Zhang, Sheng and Usuyama, Naoto and
+            Liu, Haotian and Yang, Jianwei and Naumann, Tristan and Poon, Hoifung
+            and Gao, Jianfeng},
+  journal = {Advances in Neural Information Processing Systems},
+  volume = {36},
+  year = {2024},
+}
+
+@misc{huang2023survey,
+  title = {A Survey on Hallucination in Large Language Models: Principles,
+           Taxonomy, Challenges, and Open Questions},
+  author = {Lei Huang and Weijiang Yu and Weitao Ma and Weihong Zhong and
+            Zhangyin Feng and Haotian Wang and Qianglong Chen and Weihua Peng and
+            Xiaocheng Feng and Bing Qin and Ting Liu},
+  year = {2023},
+  eprint = {2311.05232},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CL},
+}
+
+@article{ji2023survey,
+  author = {Ji, Ziwei and Lee, Nayeon and Frieske, Rita and Yu, Tiezheng and Su,
+            Dan and Xu, Yan and Ishii, Etsuko and Bang, Ye Jin and Madotto,
+            Andrea and Fung, Pascale},
+  title = {Survey of Hallucination in Natural Language Generation},
+  year = {2023},
+  issue_date = {December 2023},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {55},
+  number = {12},
+  issn = {0360-0300},
+  url = {https://doi.org/10.1145/3571730},
+  doi = {10.1145/3571730},
+  abstract = {Natural Language Generation (NLG) has improved exponentially in
+              recent years thanks to the development of sequence-to-sequence deep
+              learning technologies such as Transformer-based language models.
+              This advancement has led to more fluent and coherent NLG, leading
+              to improved development in downstream tasks such as abstractive
+              summarization, dialogue generation, and data-to-text generation.
+              However, it is also apparent that deep learning based generation is
+              prone to hallucinate unintended text, which degrades the system
+              performance and fails to meet user expectations in many real-world
+              scenarios. To address this issue, many studies have been presented
+              in measuring and mitigating hallucinated texts, but these have
+              never been reviewed in a comprehensive manner before.In this survey
+              , we thus provide a broad overview of the research progress and
+              challenges in the hallucination problem in NLG. The survey is
+              organized into two parts: (1) a general overview of metrics,
+              mitigation methods, and future directions, and (2) an overview of
+              task-specific research progress on hallucinations in the following
+              downstream tasks, namely abstractive summarization, dialogue
+              generation, generative question answering, data-to-text generation,
+              and machine translation. This survey serves to facilitate
+              collaborative efforts among researchers in tackling the challenge
+              of hallucinated texts in NLG.},
+  journal = {ACM Comput. Surv.},
+  month = mar,
+  articleno = {248},
+  numpages = {38},
+  keywords = {consistency in NLG, factuality in NLG, faithfulness in NLG,
+              extrinsic hallucination, intrinsic hallucination, Hallucination},
+}
+
+@inproceedings{zero-shot-reasoner,
+  author = {Kojima, Takeshi and Gu, Shixiang (Shane) and Reid, Machel and Matsuo
+            , Yutaka and Iwasawa, Yusuke},
+  booktitle = {Advances in Neural Information Processing Systems},
+  editor = {S. Koyejo and S. Mohamed and A. Agarwal and D. Belgrave and K. Cho
+            and A. Oh},
+  pages = {22199--22213},
+  publisher = {Curran Associates, Inc.},
+  title = {Large Language Models are Zero-Shot Reasoners},
+  url = {
+         https://proceedings.neurips.cc/paper_files/paper/2022/file/8bb0d291acd4acf06ef112099c16f326-Paper-Conference.pdf
+         },
+  volume = {35},
+  year = {2022},
+}
+
+@article{palm,
+  author = {Aakanksha Chowdhery and Sharan Narang and Jacob Devlin and Maarten
+            Bosma and Gaurav Mishra and Adam Roberts and Paul Barham and Hyung
+            Won Chung and Charles Sutton and Sebastian Gehrmann and Parker Schuh
+            and Kensen Shi and Sasha Tsvyashchenko and Joshua Maynez and Abhishek
+            Rao and Parker Barnes and Yi Tay and Noam Shazeer and Vinodkumar
+            Prabhakaran and Emily Reif and Nan Du and Ben Hutchinson and Reiner
+            Pope and James Bradbury and Jacob Austin and Michael Isard and Guy
+            Gur-Ari and Pengcheng Yin and Toju Duke and Anselm Levskaya and
+            Sanjay Ghemawat and Sunipa Dev and Henryk Michalewski and Xavier
+            Garcia and Vedant Misra and Kevin Robinson and Liam Fedus and Denny
+            Zhou and Daphne Ippolito and David Luan and Hyeontaek Lim and Barret
+            Zoph and Alexander Spiridonov and Ryan Sepassi and David Dohan and
+            Shivani Agrawal and Mark Omernick and Andrew M. Dai and Thanumalayan
+            Sankaranarayana Pillai and Marie Pellat and Aitor Lewkowycz and Erica
+            Moreira and Rewon Child and Oleksandr Polozov and Katherine Lee and
+            Zongwei Zhou and Xuezhi Wang and Brennan Saeta and Mark Diaz and
+            Orhan Firat and Michele Catasta and Jason Wei and Kathy
+            Meier-Hellstern and Douglas Eck and Jeff Dean and Slav Petrov and
+            Noah Fiedel},
+  title = {PaLM: Scaling Language Modeling with Pathways},
+  journal = {Journal of Machine Learning Research},
+  year = {2023},
+  volume = {24},
+  number = {240},
+  pages = {1--113},
+  url = {http://jmlr.org/papers/v24/22-1144.html},
+}
+
+@article{won2024scaling,
+  author = {Hyung Won Chung and Le Hou and Shayne Longpre and Barret Zoph and Yi
+            Tay and William Fedus and Yunxuan Li and Xuezhi Wang and Mostafa
+            Dehghani and Siddhartha Brahma and Albert Webson and Shixiang Shane
+            Gu and Zhuyun Dai and Mirac Suzgun and Xinyun Chen and Aakanksha
+            Chowdhery and Alex Castro-Ros and Marie Pellat and Kevin Robinson and
+            Dasha Valter and Sharan Narang and Gaurav Mishra and Adams Yu and
+            Vincent Zhao and Yanping Huang and Andrew Dai and Hongkun Yu and Slav
+            Petrov and Ed H. Chi and Jeff Dean and Jacob Devlin and Adam Roberts
+            and Denny Zhou and Quoc V. Le and Jason Wei},
+  title = {Scaling Instruction-Finetuned Language Models},
+  journal = {Journal of Machine Learning Research},
+  year = {2024},
+  volume = {25},
+  number = {70},
+  pages = {1--53},
+  url = {http://jmlr.org/papers/v25/23-0870.html},
+}
+
+@article{wei2021finetuned,
+  title = {Finetuned language models are zero-shot learners},
+  author = {Wei, Jason and Bosma, Maarten and Zhao, Vincent Y and Guu, Kelvin
+            and Yu, Adams Wei and Lester, Brian and Du, Nan and Dai, Andrew M and
+            Le, Quoc V},
+  journal = {arXiv preprint arXiv:2109.01652},
+  year = {2021},
+}
+
+@article{umls,
+  title = {The unified medical language system (UMLS): integrating biomedical
+           terminology},
+  author = {Bodenreider, Olivier},
+  journal = {Nucleic acids research},
+  volume = {32},
+  number = {suppl\_1},
+  pages = {D267--D270},
+  year = {2004},
+  publisher = {Oxford University Press},
+}
+
+@inproceedings{pubmedqa,
+  title = "{P}ub{M}ed{QA}: A Dataset for Biomedical Research Question Answering",
+  author = "Jin, Qiao and Dhingra, Bhuwan and Liu, Zhengping and Cohen, William
+            and Lu, Xinghua",
+  editor = "Inui, Kentaro and Jiang, Jing and Ng, Vincent and Wan, Xiaojun",
+  booktitle = "Proceedings of the 2019 Conference on Empirical Methods in
+               Natural Language Processing and the 9th International Joint
+               Conference on Natural Language Processing (EMNLP-IJCNLP)",
+  month = nov,
+  year = "2019",
+  address = "Hong Kong, China",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/D19-1259",
+  doi = "10.18653/v1/D19-1259",
+  pages = "2567--2577",
+  abstract = "We introduce PubMedQA, a novel biomedical question answering (QA)
+              dataset collected from PubMed abstracts. The task of PubMedQA is to
+              answer research questions with yes/no/maybe (e.g.: Do preoperative
+              statins reduce atrial fibrillation after coronary artery bypass
+              grafting?) using the corresponding abstracts. PubMedQA has 1k
+              expert-annotated, 61.2k unlabeled and 211.3k artificially generated
+              QA instances. Each PubMedQA instance is composed of (1) a question
+              which is either an existing research article title or derived from
+              one, (2) a context which is the corresponding abstract without its
+              conclusion, (3) a long answer, which is the conclusion of the
+              abstract and, presumably, answers the research question, and (4) a
+              yes/no/maybe answer which summarizes the conclusion. PubMedQA is
+              the first QA dataset where reasoning over biomedical research texts
+              , especially their quantitative contents, is required to answer the
+              questions. Our best performing model, multi-phase fine-tuning of
+              BioBERT with long answer bag-of-word statistics as additional
+              supervision, achieves 68.1{\%} accuracy, compared to single human
+              performance of 78.0{\%} accuracy and majority-baseline of 55.2{\%}
+              accuracy, leaving much room for improvement. PubMedQA is publicly
+              available at \url{https://pubmedqa.github.io}.",
+}
+
+@article{medqa,
+  title = {What disease does this patient have? a large-scale open domain
+           question answering dataset from medical exams},
+  author = {Jin, Di and Pan, Eileen and Oufattole, Nassim and Weng, Wei-Hung and
+            Fang, Hanyi and Szolovits, Peter},
+  journal = {Applied Sciences},
+  volume = {11},
+  number = {14},
+  pages = {6421},
+  year = {2021},
+  publisher = {MDPI},
+}
+
+@misc{flan-t5-xl,
+  doi = {10.48550/ARXIV.2210.11416},
+  url = {https://arxiv.org/abs/2210.11416},
+  author = {Chung, Hyung Won and Hou, Le and Longpre, Shayne and Zoph, Barret
+            and Tay, Yi and Fedus, William and Li, Eric and Wang, Xuezhi and
+            Dehghani, Mostafa and Brahma, Siddhartha and Webson, Albert and Gu,
+            Shixiang Shane and Dai, Zhuyun and Suzgun, Mirac and Chen, Xinyun and
+            Chowdhery, Aakanksha and Narang, Sharan and Mishra, Gaurav and Yu,
+            Adams and Zhao, Vincent and Huang, Yanping and Dai, Andrew and Yu,
+            Hongkun and Petrov, Slav and Chi, Ed H. and Dean, Jeff and Devlin,
+            Jacob and Roberts, Adam and Zhou, Denny and Le, Quoc V. and Wei,
+            Jason},
+  keywords = {Machine Learning (cs.LG), Computation and Language (cs.CL), FOS:
+              Computer and information sciences, FOS: Computer and information
+              sciences},
+  title = {Scaling Instruction-Finetuned Language Models},
+  publisher = {arXiv},
+  year = {2022},
+  copyright = {Creative Commons Attribution 4.0 International},
+}
+
+@article{roberta,
+  title = {Roberta: A robustly optimized bert pretraining approach},
+  author = {Liu, Yinhan and Ott, Myle and Goyal, Naman and Du, Jingfei and Joshi
+            , Mandar and Chen, Danqi and Levy, Omer and Lewis, Mike and
+            Zettlemoyer, Luke and Stoyanov, Veselin},
+  journal = {arXiv preprint arXiv:1907.11692},
+  year = {2019},
+}
+
+@inproceedings{openbookqa,
+  title = "Can a Suit of Armor Conduct Electricity? A New Dataset for Open Book
+           Question Answering",
+  author = "Mihaylov, Todor and Clark, Peter and Khot, Tushar and Sabharwal,
+            Ashish",
+  editor = "Riloff, Ellen and Chiang, David and Hockenmaier, Julia and Tsujii,
+            Jun{'}ichi",
+  booktitle = "Proceedings of the 2018 Conference on Empirical Methods in
+               Natural Language Processing",
+  month = oct,
+  year = "2018",
+  address = "Brussels, Belgium",
+  publisher = "Association for Computational Linguistics",
+  url = "https://aclanthology.org/D18-1260",
+  doi = "10.18653/v1/D18-1260",
+  pages = "2381--2391",
+  abstract = "We present a new kind of question answering dataset, OpenBookQA,
+              modeled after open book exams for assessing human understanding of
+              a subject. The open book that comes with our questions is a set of
+              1326 elementary level science facts. Roughly 6000 questions probe
+              an understanding of these facts and their application to novel
+              situations. This requires combining an open book fact (e.g., metals
+              conduct electricity) with broad common knowledge (e.g., a suit of
+              armor is made of metal) obtained from other sources. While existing
+              QA datasets over documents or knowledge bases, being generally
+              self-contained, focus on linguistic understanding, OpenBookQA
+              probes a deeper understanding of both the topic{---}in the context
+              of common knowledge{---}and the language it is expressed in. Human
+              performance on OpenBookQA is close to 92{\%}, but many
+              state-of-the-art pre-trained QA methods perform surprisingly poorly
+              , worse than several simple neural baselines we develop. Our oracle
+              experiments designed to circumvent the knowledge retrieval
+              bottleneck demonstrate the value of both the open book and
+              additional facts. We leave it as a challenge to solve the retrieval
+              problem in this multi-hop setting and to close the large gap to
+              human performance.",
+}
+
+@article{ai2reasoning,
+  title = {Think you have solved question answering? try arc, the ai2 reasoning
+           challenge},
+  author = {Clark, Peter and Cowhey, Isaac and Etzioni, Oren and Khot, Tushar
+            and Sabharwal, Ashish and Schoenick, Carissa and Tafjord, Oyvind},
+  journal = {arXiv preprint arXiv:1803.05457},
+  year = {2018},
+}
+
+@article{piqa,
+  title = {PIQA: Reasoning about Physical Commonsense in Natural Language},
+  volume = {34},
+  url = {https://ojs.aaai.org/index.php/AAAI/article/view/6239},
+  DOI = {10.1609/aaai.v34i05.6239},
+  abstractNote = {&lt;p&gt;To apply eyeshadow without a brush, should I use a
+                  &lt;em&gt;cotton swab or a toothpick&lt;/em&gt;? Questions
+                  requiring this kind of &lt;strong&gt;physical
+                  commonsense&lt;/strong&gt; pose a challenge to today’s natural
+                  language understanding systems. While recent pretrained models
+                  (such as BERT) have made progress on question answering over
+                  more &lt;em&gt;abstract&lt;/em&gt; domains – such as news
+                  articles and encyclopedia entries, where text is plentiful – in
+                  more &lt;em&gt;physical&lt;/em&gt; domains, text is inherently
+                  limited due to reporting bias. Can AI systems learn to reliably
+                  answer physical commonsense questions without experiencing the
+                  physical world?&lt;/p&gt;&lt;p&gt;In this paper, we introduce
+                  the task of physical commonsense reasoning and a corresponding
+                  benchmark dataset &lt;strong&gt;Physical Interaction: Question
+                  Answering&lt;/strong&gt; or &lt;strong&gt;PIQA&lt;/strong&gt;.
+                  Though humans find the dataset easy (95% accuracy), large
+                  pretrained models struggle (∼75%). We provide analysis about
+                  the dimensions of knowledge that existing models lack, which
+                  offers significant opportunities for future research.&lt;/p&gt;
+                  },
+  number = {05},
+  journal = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  author = {Bisk, Yonatan and Zellers, Rowan and Le bras, Ronan and Gao,
+            Jianfeng and Choi, Yejin},
+  year = {2020},
+  month = apr,
+  pages = {7432-7439},
+}
+
+@article{riddle,
+  title = {Riddlesense: Reasoning about riddle questions featuring linguistic
+           creativity and commonsense knowledge},
+  author = {Lin, Bill Yuchen and Wu, Ziyi and Yang, Yichi and Lee, Dong-Ho and
+            Ren, Xiang},
+  journal = {arXiv preprint arXiv:2101.00376},
+  year = {2021},
+}
+
+@misc{dominos_ai,
+  title = {Domino's® and Microsoft Cook Up AI-Driven Innovation Alliance for
+           Smarter Pizza Orders and Seamless Operations},
+  year = {2023},
+  author = {{Domino's Pizza Inc.}},
+  url = {
+         https://ir.dominos.com/news-releases/news-release-details/dominosr-and-microsoft-cook-ai-driven-innovation-alliance
+         },
+}
+
+
+@inproceedings{IB,
+  title = {Deep Learning and the Information Bottleneck Principle},
+  author = {Tishby, N. and Zaslavsky},
+  booktitle = {2015 IEEE Information Theory Workshop},
+  year = {2015},
+}
+
+@inproceedings{TransH,
+  title = {Knowledge graph embedding by translating on hyperplanes},
+  author = {Wang, Zhen and Zhang, Jianwen and Feng, Jianlin and Chen, Zheng},
+  booktitle = {AAAI},
+  volume = {28},
+  pages = {1112--1119},
+  year = {2014},
+}
+
+@inproceedings{grt,
+  title = {Graph Reasoning Transformers for Knowledge-Aware Question Answering},
+  author = {Zhao, Ruilin and Zhao, Feng and Hu, Liang and Xu, Guandong},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume = {38},
+  number = {17},
+  pages = {19652--19660},
+  year = {2024},
+}
+
+@inproceedings{qat,
+  title = {Relation-aware language-graph transformer for question answering},
+  author = {Park, Jinyoung and Choi, Hyeong Kyu and Ko, Juyeon and Park,
+            Hyeonjin and Kim, Ji-Hoon and Jeong, Jisu and Kim, Kyungmin and Kim,
+            Hyunwoo},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume = {37},
+  number = {11},
+  pages = {13457--13464},
+  year = {2023},
+}
+
+@inproceedings{fits,
+  title = {Fits: Fine-grained two-stage training for knowledge-aware question
+           answering},
+  author = {Ye, Qichen and Cao, Bowen and Chen, Nuo and Xu, Weiyuan and Zou,
+            Yuexian},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume = {37},
+  number = {11},
+  pages = {13914--13922},
+  year = {2023},
+}
+
+@article{vib,
+  title = {Deep variational information bottleneck},
+  author = {Alemi, Alexander A and Fischer, Ian and Dillon, Joshua V and Murphy,
+            Kevin},
+  journal = {arXiv preprint arXiv:1612.00410},
+  year = {2016},
+}
+
+@article{gib,
+  title = {Graph information bottleneck},
+  author = {Wu, Tailin and Ren, Hongyu and Li, Pan and Leskovec, Jure},
+  journal = {Advances in Neural Information Processing Systems},
+  volume = {33},
+  pages = {20437--20448},
+  year = {2020},
+}
