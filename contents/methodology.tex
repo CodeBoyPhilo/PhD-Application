@@ -6,18 +6,14 @@ To answer our formulated research questions and realise our objectives, we plan 
 We will continue to survey existing and emerging literature that leverages Knowledge Graph in LLM domain-specific adaptation to build a thorough understanding of the task. 
 In addition, we will explore the availability of domain-specific KGs and datasets that can be used for evaluation in our research.
 
-\jy{You should focus on what mythologies will be developed.}
-
-\textbf{Methodology formulation on information-theory based knowledge representation learning. } \jy{This is just one possibility. You will need to be more specific what you want to achieve.}
+\textbf{Methodology formulation. }
 We will research relevant information theories such as Information Bottleneck~\parencite{IB, vib, gib} to design a novel graph learning algorithm that learns a sufficiently compact knowledge representation, filtering out superfluous information while maximising the mutual information between the graph and text heterogeneous representations.
+\hw{By using the knowledge representation to enrich the LLM's representation space, our method aims to provide the domain-expertise that a general-purpose LLM lacks in domain-specific QA. }
+\hw{In addition, we propose to fine-tune on selective layers of the LLM to guide the LLM inference with our knowledge infused input representations.}
+\hw{Thus, our method aims to mitigate LLM hallucinations in response generation without largely increasing the computational cost.}
 
 \textbf{Evaluation on domain-specific datasets. } 
 We will evaluate our proposed method on domain-specific datasets, begining with the biomedical datasets including MedQA-USMLE~\parencite{medqa} and PubMedQA~\parencite{pubmedqa}.
 
-\jy{You need to think more carefully on this. It is probably preferable to use the term of "annotated data" rather than "data dependency"?}
 \textbf{Assessment of data dependency and model complexity. }
-We will conduct thorough experiments and compare with existing methods to evaluate the magnitude of data dependency and model complexity of our algorithm. 
-
-% \hw{\textbf{Investigation of model robustness and domain-generalisation ability. }
-% We will continue to evaluate our model on various domain-specific QA scenario to investigate our model's sensitivity to perturbations in setups and the generalisation ability to other specific domains.}
-
+\hw{We will conduct thorough experiments and compare with existing methods to evaluate our method's reliance on the number of annotated domain-specific data and the complexity of our algorithm.}
