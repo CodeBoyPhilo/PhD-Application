@@ -31,10 +31,7 @@ Very recently, research studies have attempted to investigate the use of a domai
 provider to augment LLM response generation ~\parencite{gnp, graph-prompter, kalm-prompting}.
 This line of research leverages knowledge triplets to represent factual information, represented as $(e_h, r, e_t)$ where $e_h, e_t$ are the head and tail entities, and $r$ represents the relation associated with them (e.g.\ [\texttt{Canberra, CapitalOf, Australia}]).
 By utilising the representation power of LLMs and relational information contained in KGs, there is considerable potential to enhance knowledge representations via information exchange between KGs and LLMs.
-While these methods are less data-dependent and often model-agnostic, finding out how to best fuse the heterogeneous information between KGs and LLMs for question-answering remains an open research challenge.
+\hw{While these methods may require less amounts of labeled training data and are often model-agnostic, finding out how to best fuse the heterogeneous information between KGs and LLMs for question-answering remains an open research challenge.}
 
 Based on the above observations, we intend to research the integration between KGs and LLMs for domain-specific question-answering tasks. 
-At a higher level, we tackle LLM domain-specific question-answering tasks with the objectives of achieving data efficiency (low dependence on labelled training dataset) and parameter efficiency (small-scale of trainable model parameters).
-To achieve this, first, we plan to utilise context-aware graph pruning methods to remove redundant knowledge from the KGs to the maximum extent to mitigate the drawbacks of knowledge noise. 
-We will further investigate the current methods of the knowledge encoder modules to formulate a graph representation learning algorithm based on information theory. 
-Finally, we research methods to effectively fuse the text modality and the graph modality together to enrich the representation space of the LLM using our learned knowledge embeddings.
+\hw{We aim to develop a novel knowledge representation learning algorithm to extract and encode informative features from the KG, and a modality fusion function to bridge the gap between the graph and text modality for an improved fusion of heterogeneous information.}
