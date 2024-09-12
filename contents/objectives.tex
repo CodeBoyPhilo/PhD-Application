@@ -1,26 +1,19 @@
-\section*{Research Aims and Contributions}
+\section*{Research Questions}
 
-This research aims to combat LLM hallucination and lack of specialised knowledge in domain-specific QA settings by integrating the knowledge graph embeddings through a fusion function. 
-% \jy{You need to think more carefully on this. It is probably preferable to use the term of "annotated data" rather than "data dependency"?}
-% \jy{In addition, we aim to develop a methodology that surpasses conventional fine-tuning paradigms in terms of data dependency and parameter efficiency. } You need to be more specific.
-\hw{In addition, we aim to develop a methodology that is resilient to the possible issue of insufficient annotated domain-specific training data.}
-\hw{Further, our method aims to achieve computational efficiency by reduce the number of trainable parameters without compromising model proficiency.}
-To achieve our goals, the proposed research aims to answer three research questions: 
-\vspace{-0.5cm}
-\begin{itemize}
-    \item[\textbf{RQ1}:] How to retrieve question-relevant information from a large-scale Knowledge Graph to augment an LLM?
-    \item[\textbf{RQ2}:] How to inject the heterogeneous representations obtained from the Knowledge Graph to enrich the LLM representation space?
-    \item[\textbf{RQ3}:] How to adapt a general-purpose LLM using a limited number of labelled data to answer domain-specific questions effectively?
-\end{itemize}
-\vspace{-0.3cm}
+At a higher level, this research aims to leverage the power of domain-specific KGs to combat the issues of LLM hallucination and lack of specialised knowledge, eventually improving the LLM's performance in domain-specific question-answering tasks.
 
-By addressing the above research questions, we aim to contribute existing literature as follows:\vspace{-0.3cm}
-\begin{enumerate}
-    \item Our research fills a crucial gap in the literature by investigating how to effectively leverage learnt representations from a KG to augment LLM-based question answering. Our research will thus contribute timely new knowledge on adapting general-purpose LLMs to specific contexts.
+However, since a real-world KG is often large in scale, it is computationally inaplicable to use the KG wholistically to augment the LLM.
+Moreover, the KG may also contain noisy or irrelevant information that could potentially distract the LLM from attending to the question-relevant information thus hurting the performance. 
+Therefore, our research aims to address the first research question:
 
-    \item We will propose a novel learning framework for KG-augmented LLM adaptation. This framework will be designed to be data-efficient for training and flexible for adapting open-source LLMs to a specific domain.
+\textbf{RQ1:} \emph{How to retrieve question-relevant information from a noisy large-scale Knowledge Graph to augment an LLM?}
 
-    \item Our proposed research will improve the applicability of LLMs by reducing the amount of domain-specific data required for effective training. It will provide insights into the adoption of LLMs across various businesses and application scenarios.
-    
-\end{enumerate}
+In addition, since a structured graph and text naturally exists in two distinct modalities, a general-purpose LLM pre-trained on text data is unable to use the structured knowledge contained in a KG effectively. 
+As such, we aim to develop methods that answers the second research question:
+
+\textbf{RQ2:} \emph{How to mitigate the modality gap between KGs and LLMs to inject the heterogeneous representation obtained from the KG to enrich the LLM representation space?}
+
+Lastly, since the amounts of domain-specific training data may be limited due to high annotation costs, our research propose to tackle this challenge and consider the third research question:
+
+\textbf{RQ3:} \emph{How to adapt a general-purpose LLM using a limited number of labelled data to answer domain-specific questions effectively?}
 
