@@ -18,19 +18,18 @@ For example, QAGNN~\parencite{qagnn} used a Graph Attention Network (GAT)~\paren
 Through the graph connectivity, the encoder iteratively updates the entity representations by attending to context-relevant neighbouring nodes.
 Moreover, GreaseLM and Dragon~\parencite{greaselm, dragon} have further introduced a cross-modal fuser to encourage information exchange between the graph and text modalities. 
 In contrast, QAT and GRT~\parencite{qat, grt} proposed to encode the KG on a triplet or path level to preserve the relational information.
-Furthermore, to improve the knowledge embedding, FiTs~\parencite{fits} have incorporated a contrastive learning objective to align the graph and LM representations of the same concept. 
+Furthermore, to improve the knowledge embedding, FiTs~\parencite{fits} have incorporated a contrastive learning objective to align the graph and LM representations of the same concept. Most of these methods are limited to graph learning at the node level, focusing merely on which concepts are important in facilitating question answering, while overlooking the intrinsic relationships among concepts that are essential for complex reasoning. 
 
-\hw{However, the above methods are limited in only considering graph learning at a node-level, i.e., the reason on which concepts are important in facilitating QA; while overlooking the importance of knowledge triplet information.}
-\hw{Although QAT and GRT managed to learn knowledge representation at a triplet level, their scope is limited to a single-hop path which fortfeits the potential of multi-hop reasoning required in complex questions.}
+%\hw{However, the above methods are limited in only considering graph learning at a node-level, i.e., the reason on which concepts are important in facilitating QA; while overlooking the importance of knowledge triplet information.}
+%\hw{Although QAT and GRT managed to learn knowledge representation at a triplet level, their scope is limited to a single-hop path which fortfeits the potential of multi-hop reasoning required in complex questions.}
 
 \textbf{LLM Domain-Specific Question Answering. }
-In domain-specific fine-tuning, existing methods typically focused on injecting domain-specific knowledge into the LLM by updating the model parameters on a full-scale or only a subset of the parameters \parencite{pmc-llama, medalpaca, llava-med}. 
-On the other hand, external resources augmented methods such as RAG-based approaches typically inject domain expertise knowledge into an input level.
-As such, their common focus is how to extract the correct knowledge from external resources, as well as how to teach the LLM to use this new knowledge effectively~\parencite {knowpat, radit}. 
-As a subset of RAG-based methods, KG-augmented methods rely on a domain-specific Knowledge Graph as the knowledge provider.
-However, since the graph connectivity structure naturally differs from flat texts, KG-based methods emphasise how to integrate the graph representation into the text modality the LLM can comprehend. 
-For instance, KAPING~\parencite{kalm-prompting} flattens the retrieved subgraph and directly inputs the text attributes of the knowledge triplets to the LLM. 
-Orthogonally, GNP~\parencite{gnp} builds on KGQA methods and pools the graph representation learned with GNNs and appends the knowledge embeddings to the question embeddings to form a \emph{soft-prompt} \parencite{prompt-tuning}.
+In domain-specific fine-tuning, existing methods typically focus on injecting domain-specific knowledge into the LLM by updating all or only a subset of model parameters \parencite{pmc-llama, medalpaca, llava-med}. 
+Alternatively, external resources augmented methods such as RAG-based approaches typically inject domain knowledge into the input level.
+The common focus of these methods is how to extract the correct knowledge from external resources and how to teach the LLM to use this new knowledge effectively~\parencite {knowpat, radit}. 
+As a subset of RAG-based methods, KG-augmented methods rely on a domain-specific KG as the knowledge provider.
+However, because the information encoded in a graph structure essentially differs from unstructured texts, KG-augmented methods emphasise how to integrate the graph representation into the text modality in a way that the LLM can comprehend. 
+For instance, KAPING~\parencite{kalm-prompting} flattens the retrieved subgraph and directly inputs the text attributes of the knowledge triplets to the LLM. GNP~\parencite{gnp} builds on KGQA methods and pools the graph representation learned with GNNs and appends the knowledge embeddings to the question embeddings to form a \emph{soft-prompt} \parencite{prompt-tuning}. Despite these early attempts, such methods remain limited in their ability to selectively fuse relevant structured knowledge from KGs into LLM representation learning. They often struggle with multi-hop reasoning and may fail to fully capture the complex relationships between concepts, which are essential for effective domain-specific question answering. 
 
-\hw{However, KAPING suffers from high knowledge noise that mislead a LLM to generate incorrect answers by attending to irrelevant information.}
-\hw{Moreover, the graph learning method used in GNP is restricted to homogeneous graph and overlooks the relational information present in a knowledge triplet.}
+%\hw{However, KAPING suffers from high knowledge noise that mislead an LLM to generate incorrect answers by attending to irrelevant information.}
+%\hw{Moreover, the graph learning method used in GNP is restricted to homogeneous graph and overlooks the relational information present in a knowledge triplet.}
