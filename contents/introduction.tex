@@ -1,8 +1,7 @@
 \section*{Introduction}\label{sec:introduction}
 
 Large Language Models (LLMs) are generative artificial intelligence (AI) systems designed to understand, generate, and interact with human language. 
-LLMs have been attracting widespread attention from both experts and
-the public, due to their advanced reasoning capabilities and exceptional performance across a variety of applications, such as text summarization, code generation, sentiment analysis, and question answering~\parencite{brown2020language, zero-shot-reasoner, palm, won2024scaling}.
+LLMs have been attracting widespread attention from both the public and expert domains, due to their advanced reasoning capabilities and exceptional performance across a variety of applications, such as text summarization, code generation, sentiment analysis, and question answering~\parencite{brown2020language, zero-shot-reasoner, palm, won2024scaling}.
 With their abilities to reason and interact, more companies are incorporating LLMs into their business models to create added values for customers. 
 For example, the fast food industry giant Domino's Pizza uses LLM-based chatbots within their recommender system
 to assist customers in placing online orders~\parencite{dominos_ai}.
@@ -17,21 +16,16 @@ For example, consider a scenario where a user seeks biomedical advice from an LL
 Another major weakness of LLMs in domain-specific question-answering is their \emph{lack of specialised domain knowledge}.
 A general-purpose LLM is typically trained on massive datasets from a broad scope of publicly available information. They often lack the specialised expertise required for generating accurate and reliable responses in specialised domains.
 
-To combat the challenges of \emph{hallucination} and \emph{lack of specialised knowledge}, a series of methods have been recently proposed, which can be classified into domain-specific fine-tuning methods and external resources augmented methods.
-
-Domain-specific fine-tuning methods, as the name suggests, aim to \emph{edit} the internal knowledge of the LLM by updating the model parameter through a full-scale fine-tuning or parameter-efficient fine-tuning methods such as LoRA~\parencite{lora}.
-However, these fine-tuning methods often require a large number of annotated data (e.g., one million tokens) in Question-Answer pairs or Instruction-Input-Output formats. In practice, such data is often scarce due to the high annotation cost. 
-In addition, the fine-tuning methods also require high computational resources as the scale of LLM parameters increases.
-
-On the other hand, external resources augmented methods explore the use of external resources such as databases, APIs, and Knowledge Graphs (KGs) to augment the LLM generation process. 
-These methods retrieves top-$k$ relevant information from reliable sources and inject them into the LLM as contexts to enrich the response generation process.
+To combat the challenges of \emph{hallucination} and \emph{lack of specialised knowledge}, a series of methods have been recently proposed, which can be classified into domain-specific fine-tuning methods and external resources augmented methods. Domain-specific fine-tuning methods aim to \emph{edit} the internal knowledge of the LLM by updating model parameter through a full-scale fine-tuning or parameter-efficient fine-tuning methods such as LoRA~\parencite{lora}.
+However, these fine-tuning methods require a large number of annotated data (e.g., one million tokens) in Question-Answer pairs or Instruction-Input-Output formats, but also require high computational resources. On the other hand, external resources augmented methods explore the use of external resources such as databases, APIs, and Knowledge Graphs (KGs) to augment the LLM generation process. These methods retrieve top-$k$ relevant information from reliable sources and inject them into the LLM as contexts to enrich the response generation process.
 However, these methods are susceptible to knowledge noise~\parencite{kbert}, i.e., not all retrieved knowledge is relevant to the target question.
 
 Very recently, research studies have attempted to investigate the use of a domain-specific Knowledge Graph (KG) as the knowledge
 provider to augment LLM response generation ~\parencite{gnp, graph-prompter, kalm-prompting}.
 This line of research leverages knowledge triplets to represent factual information, represented as $(e_h, r, e_t)$ where $e_h, e_t$ are the head and tail entities, and $r$ represents the relation associated with them (e.g.\ [\texttt{Canberra, CapitalOf, Australia}]).
-By utilising the representation power of LLMs and relational information contained in KGs, there is considerable potential to enhance knowledge representations via information exchange between KGs and LLMs.
-\hw{While these methods may require less amounts of labeled training data and are often model-agnostic, finding out how to best fuse the heterogeneous information between KGs and LLMs for question-answering remains an open research challenge.}
+By utilising the representation power of LLMs and relational information contained in KGs, there is considerable potential to enhance knowledge representations via information exchange between KGs and LLMs. Despite its great prospects, how to best fuse the heterogeneous information between KGs and LLMs to facilitate domain-specific question answering remains an open research challenge. Therefore, our proposed research will focus on the integration between KGs and LLMs for domain-specific question-answering tasks. 
 
-Based on the above observations, we intend to research the integration between KGs and LLMs for domain-specific question-answering tasks. 
-\hw{We aim to develop a novel knowledge representation learning algorithm to extract and encode informative features from the KG, and a modality fusion function to bridge the gap between the graph and text modality for an improved fusion of heterogeneous information.}
+%\hw{While these methods may require less amounts of labelled training data and are often model-agnostic, finding out how to best fuse the heterogeneous information between KGs and LLMs for question-answering remains an open research challenge.}
+
+% Based on the above observations, we intend to research the integration between KGs and LLMs for domain-specific question-answering tasks. 
+% \hw{We aim to develop a novel knowledge representation learning algorithm to extract and encode informative features from the KG, and a modality fusion function to bridge the gap between the graph and text modality for an improved fusion of heterogeneous information.}

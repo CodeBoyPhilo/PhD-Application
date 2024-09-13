@@ -1,19 +1,16 @@
 \section*{Research Questions}
 
-At a higher level, this research aims to leverage the power of domain-specific KGs to combat the issues of LLM hallucination and lack of specialised knowledge, eventually improving the LLM's performance in domain-specific question-answering tasks.
+At a higher level, this research aims to leverage domain-specific KGs to address the challenges of LLM hallucination and lack of specialised knowledge, with the ultimate goal of improving the LLM's performance in domain-specific question-answering tasks.
 
-However, since a real-world KG is often large in scale, it is computationally inaplicable to use the KG wholistically to augment the LLM.
-Moreover, the KG may also contain noisy or irrelevant information that could potentially distract the LLM from attending to the question-relevant information thus hurting the performance. 
-Therefore, our research aims to address the first research question:
+However, real-world KGs are often vast in scale, making it computationally inapplicable to use an entire KG to augment the LLM. Moreover, KGs may contain irrelevant or noisy information that could distract the LLM from attending to the question-relevant information thus hurting the performance. Therefore, our research aims to address the first research question:
 
-\textbf{RQ1:} \emph{How to retrieve question-relevant information from a noisy large-scale Knowledge Graph to augment an LLM?}
+\textbf{RQ1:} \emph{How can we effectively retrieve question-relevant information from a noisy large-scale Knowledge Graph to augment an LLM?}
 
-In addition, since a structured graph and text naturally exists in two distinct modalities, a general-purpose LLM pre-trained on text data is unable to use the structured knowledge contained in a KG effectively. 
-As such, we aim to develop methods that answers the second research question:
+Furthermore, structured KGs and text questions naturally reside in two distinct feature spaces, making it difficult for LLMs pre-trained on text data to integrate the structured knowledge from KGs. As such, we aim to develop methods that answer the second research question:
 
-\textbf{RQ2:} \emph{How to mitigate the modality gap between KGs and LLMs to inject the heterogeneous representation obtained from the KG to enrich the LLM representation space?}
+\textbf{RQ2:} \emph{How can we bridge the modality gap between KGs and LLMs to integrate heterogeneous information from KGs into the LLM's representation space?}
 
-Lastly, since the amounts of domain-specific training data may be limited due to high annotation costs, our research propose to tackle this challenge and consider the third research question:
+Lastly, since domain-specific training data may be limited due to high annotation costs, our research aims to address the third research question:
 
-\textbf{RQ3:} \emph{How to adapt a general-purpose LLM using a limited number of labelled data to answer domain-specific questions effectively?}
+\textbf{RQ3:} \emph{How can a general-purpose LLM be adapted with limited amounts of labelled data to effectively answer domain-specific questions?}
 

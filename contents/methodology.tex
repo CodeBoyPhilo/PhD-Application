@@ -1,21 +1,23 @@
-\section*{Methodology}
+\section*{Methodologies and Contributions}
 
-To answer our formulated research questions and realise our objectives, we plan to conduct the research in the following steps:
+To answer our formulated research questions and achieve our research objectives, we plan to conduct the research in the following steps:
 
 \textbf{Survey on KG-augmented LLM generation methods. } 
-We will continue to survey existing and emerging literature that leverages Knowledge Graph in LLM domain-specific adaptation to build a thorough understanding of the task. 
+We will continue to survey the existing and emerging literature that leverages KGs in LLM adaptation to build a thorough understanding of the task. 
 In addition, we will explore the availability of domain-specific KGs and datasets that can be used for evaluation in our research.
 
-\textbf{Methodology formulation. }
-We will design a novel knowledge representation learning algorithm that embeds a question-relevant subgraph into informative knowledge features, prevserving only useful knowledge while filtering out superfluous information. 
-In addition, based on the knowledge representations learned, we will research and develop a modality fusion function that mitigates the gap between the graph and text modality, promoting a deep interaction and fusion of the two heterogeneous representation space. 
-In a nut shell, our research aims to make a contribution by developing a novel learning framework for KG-augmented LLM adaptation. 
+\textbf{Methodology formulation.}
+We will develop novel learning frameworks that can jointly learn knowledge representations from both KGs and LLMs.
+%embeds a question-relevant subgraph into informative knowledge features, prevserving only useful knowledge while filtering out superfluous information. 
+In addition, we will investigate information theory based multi-modal fusion algorithms that bridge the gap between the graph and text modality to facilitate the interaction and fusion of two heterogeneous representation spaces. 
+In a nut shell, our research aims to make methedological contributions by developing novel learning frameworks for KG-augmented LLM adaptation. 
 
 \textbf{Evaluation on domain-specific datasets. } 
-We will evaluate our proposed method on domain-specific datasets and compare with baseline methods, begining with the biomedical datasets including MedQA-USMLE~\parencite{medqa} and PubMedQA~\parencite{pubmedqa}.
-Through evaluation, our research aims to contribute timely new knowledge to the field by investigating how our proposed method generalises to different domains as well as the strengths and limitations of our proposed framework. 
+We will evaluate our proposed methods on domain-specific datasets and compare with baseline methods, beginning with the biomedical datasets including MedQA-USMLE~\parencite{medqa} and PubMedQA~\parencite{pubmedqa}.
+Through evaluation, our research aims to contribute timely new knowledge to the field by investigating how our proposed methods can generalise to various domains as well as analyse their strengths and limitations. 
 
-\textbf{Assessment of the reliance on training data and sensitivity to changes in LLM architecture. }
-Compared with conventional domain-specific fine-tuning, our proposed method aims to complement existing methods by achieving a lower reliance on the amounts of labeled training data used and a higher flexibility for adapting open-source LLMs to a specific domain.
-Thus, we will design controled experiments, testing the model performance with varying amounts of labeled training data. 
-Additionally, we will conduct experiments to assess the flexibility of our framework across various LLM architectures by altering the backbone LLM.
+\textbf{Assessment of the reliance on training data and generalisation to different LLM architectures. }
+As our proposed research aims to adapt open-source LLMs to a specific domain only using a limited number of labelled data, we will design controlled experiments to evaluate model performance with varying amounts of labelled data. Our experiments will also extend to assessing the flexibility of our framework across various LLM backbones.
+
+%complement existing methods by achieving a lower reliance on the amounts of labeled training data used and a higher flexibility for adapting open-source LLMs to a specific domain.
+
