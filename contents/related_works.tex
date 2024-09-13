@@ -20,6 +20,9 @@ Moreover, GreaseLM and Dragon~\parencite{greaselm, dragon} have further introduc
 In contrast, QAT and GRT~\parencite{qat, grt} proposed to encode the KG on a triplet or path level to preserve the relational information.
 Furthermore, to improve the knowledge embedding, FiTs~\parencite{fits} have incorporated a contrastive learning objective to align the graph and LM representations of the same concept. 
 
+\hw{However, the above methods are limited in only considering graph learning at a node-level, i.e., the reason on which concepts are important in facilitating QA; while overlooking the importance of knowledge triplet information.}
+\hw{Although QAT and GRT managed to learn knowledge representation at a triplet level, their scope is limited to a single-hop path which fortfeits the potential of multi-hop reasoning required in complex questions.}
+
 \textbf{LLM Domain-Specific Question Answering. }
 In domain-specific fine-tuning, existing methods typically focused on injecting domain-specific knowledge into the LLM by updating the model parameters on a full-scale or only a subset of the parameters \parencite{pmc-llama, medalpaca, llava-med}. 
 On the other hand, external resources augmented methods such as RAG-based approaches typically inject domain expertise knowledge into an input level.
@@ -29,4 +32,5 @@ However, since the graph connectivity structure naturally differs from flat text
 For instance, KAPING~\parencite{kalm-prompting} flattens the retrieved subgraph and directly inputs the text attributes of the knowledge triplets to the LLM. 
 Orthogonally, GNP~\parencite{gnp} builds on KGQA methods and pools the graph representation learned with GNNs and appends the knowledge embeddings to the question embeddings to form a \emph{soft-prompt} \parencite{prompt-tuning}.
 
-\jy{You might consider adding a short paragraph here to summarise the limitataions of the existing works.}
+\hw{However, KAPING suffers from high knowledge noise that mislead a LLM to generate incorrect answers by attending to irrelevant information.}
+\hw{Moreover, the graph learning method used in GNP is restricted to homogeneous graph and overlooks the relational information present in a knowledge triplet.}
